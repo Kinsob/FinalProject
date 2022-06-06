@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class FavouriteUserRecipe {
+public class UserFavouriteRecipe {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
