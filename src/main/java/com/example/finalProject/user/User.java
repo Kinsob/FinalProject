@@ -1,8 +1,13 @@
 package com.example.finalProject.user;
 
+import com.example.finalProject.recipe.Recipe;
 import com.example.finalProject.role.Role;
+import org.hibernate.validator.constraints.UniqueElements;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.util.Set;
 
 @Entity
@@ -14,6 +19,15 @@ public class User {
     private String username;
     private String password;
     private int enabled;  //zalogowany
+
+    @Email
+    @NotEmpty
+    @UniqueElements
+    private String email;
+
+    @ManyToOne
+    private Recipe recipe;
+
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
@@ -41,6 +55,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public int getEnabled() {

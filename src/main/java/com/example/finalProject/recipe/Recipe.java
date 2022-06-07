@@ -1,5 +1,8 @@
 package com.example.finalProject.recipe;
 
+import com.example.finalProject.Category;
+import com.example.finalProject.user.User;
+
 import javax.persistence.*;
 
 @Entity
@@ -15,8 +18,11 @@ public class Recipe {
     private int preparationTime;
     private boolean alcoholic;  //jest lub nie jest
 
-    @OneToOne
-    private Recipe recipe;
+    @ManyToOne
+    private Category category;
+
+    @ManyToOne
+    private User user;
 
     public Long getId() {
         return id;
