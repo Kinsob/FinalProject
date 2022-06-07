@@ -4,7 +4,6 @@ import com.example.finalProject.recipe.RecipeRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@RequestMapping("/dashboard")
 @Controller
 public class DashboardController {
 

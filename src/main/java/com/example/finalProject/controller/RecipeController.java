@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("/recipe")
 public class RecipeController {
 
     private final RecipeRepository recipeRepository;
@@ -17,13 +16,8 @@ public class RecipeController {
         this.recipeRepository = recipeRepository;
     }
 
-    @GetMapping("/add")
-    @ResponseBody
+    @GetMapping("/recipe")
     public String showRecipe() {
-        Recipe recipe = new Recipe();
-        recipe.setName("recipe");
-        recipe.setName("recipe");
-        recipe.showRecipe(recipe);
         return "recipe";
     }
 

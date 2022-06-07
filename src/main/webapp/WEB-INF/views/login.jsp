@@ -14,7 +14,7 @@
     if (confirm('Czy masz ukończone 18 lat?')) {
         alert('Zapraszamy :)');
     } else {
-        alert('Musisz jeszcze poczekać mordeczko');
+        alert('Niestety treści zawarte na stronie nie są dla Ciebie odpowiednie Mordeczko :(');
     }
 </script>
 

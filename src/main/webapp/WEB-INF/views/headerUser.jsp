@@ -24,7 +24,7 @@
 <body>
 <header class="page-header">
     <nav class="navbar navbar-expand-lg justify-content-around">
-        <a href="/dashboard" class="navbar-brand main-logo">
+        <a href="/" class="navbar-brand main-logo">
             Coctail<span>Fabric</span>
         </a>
         <ul class="nav nounderline text-uppercase">

@@ -1,7 +1,7 @@
 /*------------------------------*/
 /*---- Main style ----*/
 /*------------------------------*/
-:root {
+root {
     --link-color: #000000;
     --light-link-color: #fffffa;
     --background-color: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
@@ -77,7 +77,7 @@ hr {
 }
 
 .border-dashed{
-    border: .5px dashed  var(--lighter-background-color);
+    border: 5px dashed  var(--lighter-background-color);
     background: var(--light-link-color);
 }
 

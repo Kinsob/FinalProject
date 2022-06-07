@@ -1,4 +1,4 @@
-package com.example.finalProject;
+package com.example.finalProject.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,13 +8,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class HomeController {
 
     @GetMapping("/")
-    public String hello() {
+    public String showHome() {
         return "home";
     }
 
-    @GetMapping("/about")
-    @ResponseBody
-    public String about() {
-        return "Here you can find some details for logged users";
-    }
 }

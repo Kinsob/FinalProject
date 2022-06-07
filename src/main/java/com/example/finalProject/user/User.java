@@ -3,11 +3,9 @@ package com.example.finalProject.user;
 import com.example.finalProject.recipe.Recipe;
 import com.example.finalProject.role.Role;
 import org.hibernate.validator.constraints.UniqueElements;
-
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 import java.util.Set;
 
 @Entity
