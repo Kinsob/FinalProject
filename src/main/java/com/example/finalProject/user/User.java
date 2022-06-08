@@ -23,8 +23,6 @@ public class User {
     @UniqueElements
     private String email;
 
-    @ManyToOne
-    private Recipe recipe;
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"),

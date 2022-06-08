@@ -4,7 +4,7 @@
 :root {
     --link-color: #000000;
     --light-link-color: #fffffa;
-    --background-color: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    --background-color: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgb(148, 187, 233) 100%);
     --lighter-background-color: #5a615f;
     --lighter-text-color: #9fa292;
     --dark-text: #000000;
@@ -279,6 +279,10 @@ hr {
 
 .footer-section{
     background: var(--background-color);
+    position:absolute;  /* odpowiada za położenie stopki na dole strony */
+    bottom:0;
+    width:100%;
+    height:60px;
 }
 
 .footer-text-color {

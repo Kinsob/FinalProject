@@ -9,7 +9,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ include file="header.jsp" %>
 
-
 <script>
     if (confirm('Czy masz ukończone 18 lat?')) {
         alert('Zapraszamy :)');

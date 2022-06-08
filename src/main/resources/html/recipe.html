@@ -1,47 +1,51 @@
+<!-- HEADER -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Coctail Fabric</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-  <link href='http://fonts.googleapis.com/css?family=Atma&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Coctail Fabric</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <link href='http://fonts.googleapis.com/css?family=Atma&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 
 <header class="page-header">
-  <nav class="navbar navbar-expand-lg justify-content-around">
-    <a href="/dashboard" class="navbar-brand main-logo">
-      Coctail<span>Fabric</span>
-    </a>
-    <ul class="nav nounderline text-uppercase">
-      <li class="nav-item ml-4">
-        <a class="nav-link color-header" href="/recipe">Przepisy</a>
-      </li>
-      <li class="nav-item ml-4">
-        <a class="nav-link color-header" href="/equipment">Sprzęt</a>
-      </li>
-      <li class="nav-item ml-4">
-        <a class="nav-link color-header" href="/favourite">Ulubione</a>
-      </li>
-      <li class="nav-item ml-4">
-        <a class="nav-link color-header" href="/counter">Licznik promili</a>
-      </li>
-      <li class="nav-item ml-4">
-        <a class="nav-link color-header" href="/logout">Wyloguj się</a>
-      </li>
-    </ul>
-  </nav>
+    <nav class="navbar navbar-expand-lg justify-content-around">
+        <a href="/dashboard" class="navbar-brand main-logo">
+            Coctail<span>Fabric</span>
+        </a>
+        <ul class="nav nounderline text-uppercase">
+            <li class="nav-item ml-4">
+                <a class="nav-link color-header" href="/recipe">Przepisy</a>
+            </li>
+            <li class="nav-item ml-4">
+                <a class="nav-link color-header" href="/equipment">Sprzęt</a>
+            </li>
+            <li class="nav-item ml-4">
+                <a class="nav-link color-header" href="/favourite">Ulubione</a>
+            </li>
+            <li class="nav-item ml-4">
+                <a class="nav-link color-header" href="/counter">Licznik promili</a>
+            </li>
+            <li class="nav-item ml-4">
+                <a class="nav-link color-header" href="/logout">Wyloguj się</a>
+            </li>
+        </ul>
+    </nav>
 </header>
 
+<!-- PANEL BOCZNY -->
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   body {
-    font-family: "Lato", sans-serif;
+    font-family: "Atma", sans-serif;
   }
 
   .sidenav {
@@ -88,20 +92,19 @@
     .sidenav a {font-size: 18px;}
   }
 </style>
-</head>
 <body>
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+  <a href="#">A-Z</a>
+  <a href="#">Z-A</a>
+  <a href="#">Według składnika</a>
+  <a href="#">Według nazwy</a>
 </div>
 
 <div id="main">
-  <h2>Sidenav Push Example</h2>
-  <p>Click on the element below to open the side navigation menu, and push this content to the right.</p>
+  <h2>Filter</h2>
+  <p>Kliknij element poniżej aby wysunąć panel boczny.</p>
   <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 </div>
 
@@ -117,17 +120,92 @@
   }
 </script>
 
+<!-- RAMKA PRZEPISU -->
+<div class="centerX">
+    <table>
+        <tbody>
+        <tr>
+            <th colspan="10" style="width: 500px; height:40px;">Tequila Sunrise</th>
+            <th rowspan="3" style="width: 230px; height:290px"> <img src="images/tequila-sunrise.jpg" style="width:250px; height:250px;"><br></th>
+        </tr>
+        <tr>
+            <th colspan="10" style="width: 500px; height:100px;">Składniki:<br>
+                tequila - 60 ml<br>
+                sok pomarańczowy - 120 ml<br>
+                grenadyna - 20 ml<br>
+                kostki lodu<br></th>
+        </tr>
+        <tr>
+            <th colspan="10" style="width: 500px; height:150px;">Sposób przygotowania:<br>
+                Tequilę i sok pomarańczowy wlej do szklanki wypełnionej kostkami lodu, dobrze wymieszaj.<br>
+                Następnie wlej delikatnie grenadyna, aby osiadła na dno.<br>
+                Całość możesz ozdobić kawałkiem pomarańczy.<br></th>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="centerX">
+    <table>
+        <tbody>
+        <tr>
+            <th colspan="10" style="width: 500px; height:40px;">Shot Kamikaze</th>
+            <th rowspan="3" style="width: 230px; height:290px"> <img src="images/shot-kamikaze.jpg" style="width:250px; height:250px;"><br></th>
+        </tr>
+        <tr>
+            <th colspan="10" style="width: 500px; height:100px;">Składniki:<br>
+                20 ml wódki<br>
+                10 ml triple sec<br>
+                10 ml soku z cytryny.<br></th>
+        </tr>
+        <tr>
+            <th colspan="10" style="width: 500px; height:150px;">Sposób przygotowania:<br>
+                Wszystkie wymienione składniki należy wstrząsnąć w shakerze, po czym rozlać do kieliszków.<br></th>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="centerX">
+    <table>
+        <tbody>
+        <tr>
+            <th colspan="10" style="width: 500px; height:40px;">Cuba Libre</th>
+            <th rowspan="3" style="width: 230px; height:290px"> <img src="images/cuba-libre.jpg" style="width:250px; height:250px;"><br></th>
+        </tr>
+        <tr>
+            <th colspan="10" style="width: 500px; height:100px;">Składniki:<br>
+                rum - 50 ml<br>
+                Coca-Cola - 120 ml<br>
+                sok z limonki - 10 ml<br>
+                kostki lodu<br></th>
+        </tr>
+        <tr>
+            <th colspan="10" style="width: 500px; height:150px;">Sposób przygotowania:<br>
+                Do szklanki Old Fashioned wypełnionej kostkami lodu wlewamy wszystkie składniki i mieszamy.
+                Sok z limonki możemy wycisnąć mudlerem podobnie jak w Mohito.<br>
+                Do szklanki możemy również wrzucić ćwiartkę limonki do ozdoby.<br></th>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<!--  FOOTER --->
+
 <footer class="footer-section pt-3 pb-3">
-  <div class="container text-center">
-    <h5 class="text-light">Copyright <span class="footer-text-color">CoctailFabric.pl</span></h5>
-  </div>
+    <div class="container text-center">
+        <h5 class="text-light">Copyright <span class="footer-text-color">CoctailFabric.pl</span></h5>
+    </div>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 </body>
 </html>

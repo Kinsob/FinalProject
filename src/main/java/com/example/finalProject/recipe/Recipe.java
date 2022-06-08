@@ -21,8 +21,6 @@ public class Recipe {
     @ManyToOne
     private Category category;
 
-    @ManyToOne
-    private User user;
 
     public Long getId() {
         return id;
