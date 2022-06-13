@@ -1,0 +1,57 @@
+INSERT INTO category (`name`) VALUES
+        ('long_drink'),
+        ('short_drink'),
+        ('shot');
+
+INSERT INTO ingredients (`name`) VALUES
+        ('teguila'),
+        ('wódka czysta'),
+        ('wódka cytrynowa'),
+        ('rum'),
+        ('malibu'),
+        ('whisky'),
+        ('gin'),
+        ('wermut wytrawny'),
+        ('tonic'),
+        ('Coca-cola'),
+        ('Sprite'),
+        ('sok pomarańczowy'),
+        ('sok pomidorowy'),
+        ('sok żurawinowy'),
+        ('sok ananasowy'),
+        ('sok malinowy'),
+        ('sok z limonki'),
+        ('sok z cytryny'),
+        ('likier pomarańczowy'),
+        ('likier Blue Curacao'),
+        ('syrop cukrowy'),
+        ('mleczko kokosowe'),
+        ('mleczko skondensowane'),
+        ('sos Worcestershire'),
+        ('tabasco'),
+        ('grenadyna'),
+        ('oliwki'),
+        ('mięta'),
+        ('truskawki'),
+        ('kostki lodu'),
+        ('sól morska'),
+        ('pieprz czarny');
+
+INSERT INTO recipe (`name`, `alcoholic`, `description`, `images`, `category_id`) VALUES
+        ('Tequila Sunrise', true, 'Tequilę i sok pomarańczowy wlej do szklanki wypełnionej kostkami lodu, dobrze wymieszaj. Następnie wlej delikatnie grenadyna, aby osiadła na dno. Całość możesz ozdobić kawałkiem pomarańczy.', 'images/tequila-sunrise.jpg', 1),
+        ('Gin & Tonic', true, 'Wysoką szklankę wypełnij kostkami lodu (do 1/3 wysokości), wlej gin i tonik, delikatnie zamieszaj, udekoruj szklankę plasterkiem cytryny lub limonki.', 'images/gin&tonic.jpg', 1),
+        ('Bloody Mary', true, 'Umieść wszystkie składniki w szklance lub shakerze i zamieszaj, do szklanki na drinka włóż kostki lodu, przelej połączone składniki do szklanki z lodem, udekoruj szklankę bazylią lub selerem naciowym. ', 'images/bloody-marry.jpg', 1),
+        ('Cuba Libre', true, 'Do szklanki Old Fashioned wypełnionej kostkami lodu wlewamy wszystkie składniki i mieszamy. Sok z limonki możemy wycisnąć mudlerem podobnie jak w Mohito. Do szklanki możemy również wrzucić ćwiartkę limonki do ozdoby.', 'images/cuba-libre.jpg', 1),
+        ('Mojito truskawkowe', false, 'Do wysokiej szklanki wrzuć mięte, limonkę (można wycisnąć) oraz rozgniecione truskawki. Następnie zasyp lodem do wysokości około 2/3 szklanki. Na końcu uzupełnij spritem.', 'images/mohito-truskawkowe.jpg', 1),
+        ('Margarita', true, 'Do shakera wrzucić kostki lodu, wlać alkohol i sok z cytryny, zamieszać. Brzeg kieliszka koktajlowego zamoczyć w soku z cytryny, a następnie otoczyć solą. Wlać zawartość shakera (bez kostek lodu).', 'images/margarita.jpg', 2),
+        ('Whisky Sour', true, 'Wstrząśnij wszystkie składniki z lodem w szejkerze i odcedź bez lodu do niskiej szklanki wypełnionej lodem.', 'images/whisky-sour.jpg', 2),
+        ('Cosmopolitan', true, 'Wszystkie składniki umieszczamy w shakerze i dobrze wstrząsamy. Przecedzamy zawartość shakera (bez resztek kostek lodu) do kieliszka koktajlowego. Kieliszek możemy ozdobić twistem z cytryny bądź limonki.', 'images/cosmopolitan.jpg', 2),
+        ('Pina Colada', true, 'Do blendera wrzuć lód, dodaj malibu i sok ananasowy, wlej porcję mleczka kokosowego, zmiksuj i przelej do szklanki, dodaj kilka kostek lodu. ', 'images/pina-colada.jpg', 2),
+        ('Martini', true, 'Zamieszaj wszystkie składniki w szklanicy z lodem i odcedź do schłodzonego kieliszka. Jako dekorację użyj zielonej oliwki.', 'images/martini.jpg', 2),
+        ('Kamikaze', true, 'Sposób przygotowania jest bardzo prosty. Jedyne, co musisz zrobić, to połączyć ze sobą wszystkie składniki w tym samym czasie. Najlepiej sprawdzi się tu shaker, do którego możesz dorzucić kilka kostek lodu. ', 'images/kamikaze.jpg', 3),
+        ('Zielona Ropucha', true, 'Wszystkie składniki umieść do shakera i dobrze wymieszaj. Następne przecedź wszystko do kieliszków (zostawiając w shakerze resztki kostek lodu).', 'images/zielona-ropucha.jpg', 3),
+        ('Wściekły pies', true, 'Do kieliszka nalej wódki, na 2/3 wysokości. Dolej syrop malinowy który powinien opaść na dno. Dodaj kilka kropli tabasco.', 'images/wsciekly-pies.jpg', 3),
+        ('Jagodzianka', true, 'Wszystkie składniki wstrząśnij dobrze w shakerze z kostkami lodu. Następnie przecedź zawartość shakera do kieliszków.', 'images/jagodzianka.jpg', 3),
+        ('Pink Lady', true, 'Wszystkie składniki wraz z lodem wlej do shakera. Mocno wstrząśnij. Następnie odcedź do kieliszka/ów, pozostawiając resztki kostek lodu w shakerze.', 'images/pink-lady.jpg', 3);
+
+SELECT * FROM recipe WHERE category_id=1;

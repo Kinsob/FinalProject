@@ -1,9 +1,9 @@
 package com.example.finalProject.recipe;
 
 import com.example.finalProject.Category;
-import com.example.finalProject.user.User;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Recipe {
@@ -12,15 +12,32 @@ public class Recipe {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String ingredients;
     private String description;
-    private int preparation;
-    private int preparationTime;
     private boolean alcoholic;  //jest lub nie jest
+    private String images;
+
+    @OneToMany(mappedBy = "recipe")
+    private List<RecipeIngredients> recipeIngredients;
 
     @ManyToOne
     private Category category;
 
+
+    public List<RecipeIngredients> getRecipeIngredients() {
+        return recipeIngredients;
+    }
+
+    public void setRecipeIngredients(List<RecipeIngredients> recipeIngredients) {
+        this.recipeIngredients = recipeIngredients;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
 
     public Long getId() {
         return id;
@@ -38,36 +55,12 @@ public class Recipe {
         this.name = name;
     }
 
-    public String getIngredients() {
-        return ingredients;
-    }
-
-    public void setIngredients(String ingredients) {
-        this.ingredients = ingredients;
-    }
-
     public String getDescription() {
         return description;
     }
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public int getPreparation() {
-        return preparation;
-    }
-
-    public void setPreparation(int preparation) {
-        this.preparation = preparation;
-    }
-
-    public int getPreparationTime() {
-        return preparationTime;
-    }
-
-    public void setPreparationTime(int preparationTime) {
-        this.preparationTime = preparationTime;
     }
 
     public boolean isAlcoholic() {
@@ -81,5 +74,11 @@ public class Recipe {
     public void showRecipe(Recipe recipe) {
     }
 
+    public String getImages() {
+        return images;
+    }
 
+    public void setImages(String images) {
+        this.images = images;
+    }
 }

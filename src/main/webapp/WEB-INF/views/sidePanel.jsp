@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <style>
   body {
@@ -61,10 +62,10 @@
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">A-Z</a>
-  <a href="#">Z-A</a>
-  <a href="#">Według składnika</a>
-  <a href="#">Według nazwy</a>
+  <a href="/recipe">A-Z</a>
+<%--  <a href="<c:url value="/recipe/1"/>">Z-A</a>--%>
+  <a href="/recipeByName">Według nazwy</a>
+  <a href="/recipeByCategory">Według kategorii</a>
 </div>
 
 <div id="main">

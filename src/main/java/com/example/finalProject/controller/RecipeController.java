@@ -21,11 +21,43 @@ public class RecipeController {
         this.ingredientsRepository = ingredientsRepository;
     }
 
+
     @GetMapping("/recipe")
-    public String showRecipe(Model model) {
-        List<Ingredients> all = ingredientsRepository.findAll();
-        model.addAttribute("all",all);
+    public String aZ(Model model) {
+        model.addAttribute("recipes", recipeRepository.findAllByOrderByName());
+        // wyświetla wszystkie przepisy posortowane od A - Z
         return "recipe";
     }
+
+//    @GetMapping("/recipe/1")
+//    public String Za(Model model) {
+//        model.addAttribute("recipes", recipeRepository.findAllByOrderByNameDesc());
+//        // wyświetla wszystkie przepisy posortowane od A - Z
+//        return "redirect:/recipe";
+//    }
+
+
+
+//    @GetMapping("/recipeZa")
+//    public String Za(Model model) {
+//        model.addAttribute("allRecipes", recipeRepository.findAllByNameOrderByDescriptionNameDesc());
+//        // wyświetla wszystkie przepisy posortowane od A - Z
+//        return "recipeZA";
+//    }
+//
+//    @GetMapping("/recipeByName")
+//    public String byName(Model model) {
+//        model.addAttribute("recipeByName", recipeRepository.findByName("Kamikaze"));
+//        // wyświetla wszystkie przepisy posortowane od A - Z
+//        return "recipeSortName";
+//    }
+//
+//    @GetMapping("/recipeByCategory")
+//    public String byCategory(Model model) {
+//        model.addAttribute("recipeByCategory", recipeRepository.findAllByCategoryId(2L));
+//        // wyświetla wszystkie przepisy posortowane od A - Z
+//        return "recipeSortCategory";
+//    }
+
 
 }

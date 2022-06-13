@@ -11,9 +11,10 @@ public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String shot;          //o objętości 50 ml lub mniejszej
-    private String shortDrink;   // o objętości 60-100 ml
-    private String longDrink;   //o objętości pow. 100 ml
+    private String name;
 
+    // long o objętości 50 ml lub mniejszej
+    // short o objętości 60-100 ml
+    // shot o objętości pow. 100 ml
 
 }
