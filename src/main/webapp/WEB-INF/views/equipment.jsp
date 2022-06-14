@@ -9,4 +9,20 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ include file="headerUser.jsp"%>
 
+<c:forEach items="${equipments}" var="equipment">
+    <div class="centerX">
+        <table>
+            <tbody>
+            <tr>
+                <th colspan="10" style="width: 500px; height:40px; font-size: xx-large" class="center">${equipment.name}</th>
+            </tr>
+            <tr>
+                <th colspan="10" style="width: 500px; height:100px;">Opis:<br>
+                        ${equipment.description}<br></th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</c:forEach>
+
 <%@ include file="footer.jsp"%>

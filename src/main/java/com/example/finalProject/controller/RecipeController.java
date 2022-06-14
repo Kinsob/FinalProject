@@ -1,14 +1,10 @@
 package com.example.finalProject.controller;
 
-import com.example.finalProject.ingredients.Ingredients;
 import com.example.finalProject.ingredients.IngredientsRepository;
-import com.example.finalProject.recipe.Recipe;
 import com.example.finalProject.recipe.RecipeRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-
-import java.util.List;
 
 @Controller
 public class RecipeController {
@@ -35,9 +31,7 @@ public class RecipeController {
 //        // wyświetla wszystkie przepisy posortowane od A - Z
 //        return "redirect:/recipe";
 //    }
-
-
-
+//
 //    @GetMapping("/recipeZa")
 //    public String Za(Model model) {
 //        model.addAttribute("allRecipes", recipeRepository.findAllByNameOrderByDescriptionNameDesc());

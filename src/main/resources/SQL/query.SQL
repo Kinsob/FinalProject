@@ -35,7 +35,10 @@ INSERT INTO ingredients (`name`) VALUES
         ('truskawki'),
         ('kostki lodu'),
         ('sól morska'),
-        ('pieprz czarny');
+        ('pieprz czarny'),
+        ('limonka'),
+        ('cytryna');
+
 
 INSERT INTO recipe (`name`, `alcoholic`, `description`, `images`, `category_id`) VALUES
         ('Tequila Sunrise', true, 'Tequilę i sok pomarańczowy wlej do szklanki wypełnionej kostkami lodu, dobrze wymieszaj. Następnie wlej delikatnie grenadyna, aby osiadła na dno. Całość możesz ozdobić kawałkiem pomarańczy.', 'images/tequila-sunrise.jpg', 1),
@@ -54,4 +57,84 @@ INSERT INTO recipe (`name`, `alcoholic`, `description`, `images`, `category_id`)
         ('Jagodzianka', true, 'Wszystkie składniki wstrząśnij dobrze w shakerze z kostkami lodu. Następnie przecedź zawartość shakera do kieliszków.', 'images/jagodzianka.jpg', 3),
         ('Pink Lady', true, 'Wszystkie składniki wraz z lodem wlej do shakera. Mocno wstrząśnij. Następnie odcedź do kieliszka/ów, pozostawiając resztki kostek lodu w shakerze.', 'images/pink-lady.jpg', 3);
 
-SELECT * FROM recipe WHERE category_id=1;
+
+INSERT INTO equipment (`name`, `description`) VALUES
+        ('Shaker','Shaker jest najważniejszym i podstawowym narzędziem w miksologii, z którego każdy barman korzysta najczęściej. Funkcje shakera: łączenie składników poprzez wstrząsanie lub mieszanie, schładzanie napoju przy minimalnym rozcieńczeniu oraz odcedzanie. Obecnie na rynku dostępnych jest wiele wariantów cocktail shaker’ów, które różnią się zarówno stylem, jak i wzorem. To, na jaki shaker się zdecydujesz zależy wyłącznie od Twoich preferencji, stopnia zaawansowania i opanowania techniki mieszania cocktaili.'),
+        ('Sito barmańskie','Kolejnym niezbędnym narzędziem każdego barmana jest sito barmańskie, zwane również sitem barowym lub koktajlowym. Sito barowe służy do oddzielania zbędnych składników (np. lód, cząstki owoców lub zioła) z koktajlu przelewanego do kieliszka po ówczesnym mieszaniu w shakerze bez wbudowanego sita (np. Boston Shaker). Najpopularniejszymi sitkami barmańskimi są:'),
+        ('Łyżka barmańska','Łyżka barowa to wyspecjalizowana łyżka używana w miksologii do mieszania koktajli bezpośrednio w szklance/kieliszku lub kubku mikserowym (szklanicy). Łyżkę barową charakteryzuje spiralna budowa, która umożliwia tworzenie warstwowych drinków (zapobiega rozpryskiwaniu kolejno nalewanych składników, dzięki czemu warstwy nie mieszają się). Kolejną funkcją łyżki jest możliwość stosowania jej jako miarka do odmierzania składników, takich jak syropy (w zależności od rodzaju łyżki, od 2,5 ml do 5 ml). Łyżka barowa wykonana jest ze stali nierdzewnej, dzięki czemu jest bardzo trwałym narzędziem oraz nie wpływa na smak koktajlu. Długość łyżki umożliwia swobodne mieszanie zarówno w wąskich szklankach, jak i większych szklanicach.'),
+        ('Jigger – miarka barowa','Precyzja i właściwie dobrane proporcje składników każdego koktajlu jest najważniejszym aspektem sztuki miksologii alkoholi. Jigger, czyli miarka barowa jest niezbędnym narzędziem, dzięki któremu odmierzysz odpowiednie ilości wybranych składników. Najczęściej spotykane są dwuczęściowe miarki, które składają się z dwóch czasz, z czego jedna ma dwukrotnie większą pojemność. Najpopularniejszymi i powszechnie dostępnymi są Jigger’y o pojemności 20-40 ml oraz 25-50ml. Ze względu na różnorodność do wyboru masz również jednoczęściowe miarki o zróżnicowanych pojemnościach, z wewnętrzną miarką/podziałką oraz szeroki wybór pod względem wyglądu, kształtu i wykończenia narzędzia.'),
+        ('Muddler (moździerz)','Muddler jest klasycznym i prostym narzędziem służącym do rozcierania lub rozgniatania składników koktajli, takich jak mięta czy owoce cytrusowe. Moździerz może być wykonany z różnych materiałów, np. stal nierdzewna, drewno lub tworzywo sztuczne, zakończone gładką lub ząbkowaną głowicą.'),
+        ('Nalewak (dozownik)','Nalewak to metalowa lub plastikowa rurka osadzona na gumowej nakładce, służy do nalewania napojów z precyzją i dokładnością, zapobiegając przy tym przelania oraz rozlania napoju poza szklankę. Wyposażony jest w mechanizm, który kontroluje przepływ cieczy powodując, że wydostaje się ona z butelki jednostajnym strumieniem.'),
+        ('Ręczny wyciskacz do cytrusów','Świeżo wyciśnięty sok z cytrusów jest idealnym składnikiem wykorzystywanym do przygotowania wyśmienitego koktajlu. Ręczny wyciskacz do cytrusów jest małym, poręcznym narzędziem, dzięki któremu w łatwy i szybki sposób wyciśniesz sok z cytryn, limonek lub grejpfrutów.'),
+        ('Szczypce do lodu, szufelka do lodu','Lód jest niezbędnym składnikiem większości koktajli. Używanie szufelki lub szczypiec do lodu pozwala na zachowanie higieny pracy.'),
+        ('Szklanica barowa','Szklanica barowa jest naczyniem przeznaczonym do mieszania koktajli przed wlaniem ich do kieliszka. Pojemność szklanicy powinna wynosić powyżej 500 ml oraz posiadać dzióbek, ułatwiający precyzyjne przelanie koktajlu do szkła.');
+
+
+INSERT INTO recipe_ingredients (`ingredients_id`, `milliliter`, `pinch`, `quantity`, `slice`, `recipe_id`) VALUES
+        (1,50,null,null,null,1),
+        (26,20,null,null,null,1),
+        (12,100,null,null,null,1),
+        (30,null,null,null,null,1),
+        (30,null,null,null,null,2),
+        (7,40,null,null,null,2),
+        (9,80,null,null,null,2),
+        (33,null,null,null,1,2),
+        (2,50,null,null,null,3),
+        (13,100,null,null,null,3),
+        (24,3,null,null,null,3),
+        (25,null,null,null,null,3),
+        (31,null,1,null,null,3),
+        (32,null,1,null,null,3),
+        (4,50,null,null,null,4),
+        (10,120,null,null,null,4),
+        (17,10,null,null,null,4),
+        (30,null,null,null,null,4),
+        (11,150,null,null,null,5),
+        (17,20,null,null,null,5),
+        (28,null,null,null,null,5),
+        (29,null,null,6,null,5),
+        (30,null,null,null,null,5),
+        (33,null,null,null,1,5),
+        (1,45,null,null,null,6),
+        (18,30,null,null,null,6),
+        (30,null,null,null,null,6),
+        (19,15,null,null,null,6),
+        (31,null,null,null,null,6),
+        (6,40,null,null,null,7),
+        (18,20,null,null,null,7),
+        (21,10,null,null,null,7),
+        (3,40,null,null,null,8),
+        (19,15,null,null,null,8),
+        (17,15,null,null,null,8),
+        (14,30,null,null,null,8),
+        (30,null,null,null,null,8),
+        (5,50,null,null,null,9),
+        (15,30,null,null,null,9),
+        (22,20,null,null,null,9),
+        (30,null,null,null,null,9),
+        (7,60,null,null,null,10),
+        (8,10,null,null,null,10),
+        (30,null,null,null,null,10),
+        (18,5,null,null,null,10),
+        (27,null,null,3,null,10),
+        (2,50,null,null,null,11),
+        (20,50,null,null,null,11),
+        (18,50,null,null,null,11),
+        (30,null,null,null,null,11),
+        (2,50,null,null,null,12),
+        (12,50,null,null,null,12),
+        (20,50,null,null,null,12),
+        (30,null,null,null,null,12),
+        (2,20,null,null,null,13),
+        (16,5,null,null,null,13),
+        (25,null,null,null,null,13),
+        (5,20,null,null,null,14),
+        (23,10,null,null,null,14),
+        (26,5,null,null,null,14),
+        (20,3,null,null,null,14),
+        (5,20,null,null,null,15),
+        (23,10,null,null,null,15),
+        (26,10,null,null,null,15),
+        (30,null,null,null,null,15);
+
+SELECT * FROM recipe_ingredients RIGHT JOIN ingredients i on i.id = recipe_ingredients.ingredients_id WHERE recipe_id=1

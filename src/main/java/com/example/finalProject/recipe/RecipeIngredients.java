@@ -1,9 +1,8 @@
 package com.example.finalProject.recipe;
 
-import com.example.finalProject.ingredients.Ingredients;
-import net.bytebuddy.utility.nullability.MaybeNull;
-
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+
 
 @Entity
 public class RecipeIngredients {
@@ -11,18 +10,18 @@ public class RecipeIngredients {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private int ingredientsId;
-    @Column(nullable = false)
-    private int quantity; // ilość szt
-    @MaybeNull
+    @Column(nullable = true)
+    private Integer quantity; // ilość szt
+    @Column(nullable = true)
     private int milliliter;  // ilość w mililitrach
-    @MaybeNull
+    @Column(nullable = true)
     private int slice;  // ilość plasterków
-    @MaybeNull
-    private int gram; // ilość gram
-    @MaybeNull
+    @Column(nullable = true)
     private int pinch; // szczypta
 
+    @NotNull
     @ManyToOne
     private Recipe recipe;
 
@@ -73,14 +72,6 @@ public class RecipeIngredients {
 
     public void setSlice(int slice) {
         this.slice = slice;
-    }
-
-    public int getGram() {
-        return gram;
-    }
-
-    public void setGram(int gram) {
-        this.gram = gram;
     }
 
     public int getPinch() {
