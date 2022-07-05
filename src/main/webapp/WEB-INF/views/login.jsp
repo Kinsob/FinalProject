@@ -9,19 +9,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ include file="header.jsp" %>
 
-<script>
-    if (confirm('Czy masz ukończone 18 lat?')) {
-        alert('Zapraszamy :)');
-    } else {
-        alert('Niestety treści zawarte na stronie nie są dla Ciebie odpowiednie Mordeczko :(');
-    }
-</script>
 
 <section class="dashboard-section">
     <div class="container pt-4 pb-4">
         <div class="border-dashed view-height">
             <div class="container w-25">
-                <form method="post" action="/dashboard" class="padding-small text-center">
+                <form method="post"  class="padding-small text-center">
                     <h1 class="text-color-darker">Logowanie</h1>
                     <div><label> User Name : <input type="text" name="username"/> </label></div>
                     <div><label> Password: <input type="password" name="password" id="myInput"/> </label>

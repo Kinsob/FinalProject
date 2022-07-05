@@ -15,11 +15,11 @@ public class RecipeIngredients {
     @Column(nullable = true)
     private Integer quantity; // ilość szt
     @Column(nullable = true)
-    private int milliliter;  // ilość w mililitrach
+    private Integer milliliter;  // ilość w mililitrach
     @Column(nullable = true)
-    private int slice;  // ilość plasterków
+    private Integer slice;  // ilość plasterków
     @Column(nullable = true)
-    private int pinch; // szczypta
+    private Integer pinch; // szczypta
 
     @NotNull
     @ManyToOne

@@ -14,10 +14,10 @@
         <table>
             <tbody>
             <tr>
-                <th colspan="10" style="width: 500px; height:40px; font-size: xx-large" class="center">${equipment.name}</th>
+                <th colspan="7" style="width: 400px; height:40px; font-size: xx-large" class="center">${equipment.name}</th>
             </tr>
             <tr>
-                <th colspan="10" style="width: 500px; height:100px;">Opis:<br>
+                <th colspan="7" style="width: 750px; height:100px;">Opis:<br>
                         ${equipment.description}<br></th>
             </tr>
             </tbody>

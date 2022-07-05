@@ -1,11 +1,7 @@
 package com.example.finalProject.user;
 
-import com.example.finalProject.recipe.Recipe;
 import com.example.finalProject.role.Role;
-import org.hibernate.validator.constraints.UniqueElements;
 import javax.persistence.*;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotEmpty;
 import java.util.Set;
 
 @Entity
@@ -13,14 +9,12 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false, unique = true, length = 60)
+
     private String username;
     private String password;
     private int enabled;  //zalogowany
 
-    @Email
-    @NotEmpty
-    @UniqueElements
+
     private String email;
 
 

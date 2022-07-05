@@ -21,9 +21,9 @@
         </tr>
         <tr>
             <th colspan="10" style="width: 500px; height:100px;">Składniki:<br>
-              <c:forEach items="${ingredientss}" var="ingredients">
-                    ${recipe.recipeIngredients}<br></th>
-            </c:forEach>
+<%--              <c:forEach items="${recipe.recipeIngredients}" var="ingredientsByRecipe">--%>
+<%--                    ${ingredientsByRecipe.milliliter}<br></th>--%>
+<%--            </c:forEach>--%>
         </tr>
         <tr>
             <th colspan="10" style="width: 500px; height:150px;">Sposób przygotowania:<br>
